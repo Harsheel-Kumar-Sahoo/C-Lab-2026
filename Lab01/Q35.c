@@ -1,7 +1,10 @@
 // READ A NUMBER N AND PRINT A SINGLE DIGIT ANSWER SHOWING SUM OF DIGIT OF N
 #include <stdio.h>
 
-int singleDigitSum(int num) {
+int main(){
+    int num;
+    printf("Enter the number : ");
+    scanf("%d", &num);
     int numCopy = num;
     int sum = 0;
 
@@ -20,11 +23,6 @@ int singleDigitSum(int num) {
         sum = newSum;
     }
 
-    return newSum;
-
-}
-
-int main(){
-    printf("%d", singleDigitSum(123456789));
+    printf("%d", newSum);
     return 0;
 }
