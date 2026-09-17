@@ -1,3 +1,4 @@
+// PROGRAM TO CALCULATE SIMPLE INTEREST.
 #include <stdio.h>
 
 int main(){
