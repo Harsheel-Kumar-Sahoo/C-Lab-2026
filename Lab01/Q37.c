@@ -3,7 +3,7 @@
 
 int main(){
     int n;
-    printf("Enter the number till which you want odd numbers: ");
+    printf("Enter the number till which you want even numbers: ");
     scanf("%d", &n);
     int i = 2;
     while (i <= n) {
