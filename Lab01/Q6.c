@@ -2,15 +2,18 @@
 #include <stdio.h>
 
 int main(){
-    int a = 10;
-    int b = 20;
+    int a, b;
+    printf("Enter the value of a :");
+    scanf("%d", &a);
+    printf("Enter the value of b :");
+    scanf("%d", &b);
 
     a = a + b;
     b = a - b;
     a = a - b;
     
-    printf("%d \n", a);
-    printf("%d", b);
+    printf("a = %d \n", a);
+    printf("b = %d", b);
     
     return 0;
 }
