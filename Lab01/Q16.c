@@ -6,29 +6,26 @@ int main(){
 
     printf("Enter the first number : ");
     scanf("%d", &a);
-    
+
     printf("Enter the second number : ");
     scanf("%d", &b);
-    
+
     printf("Enter the third number : ");
-    scanf("%d", &c);
+    scanf(" %d", &c);
 
     if (a >= b) {
         if (a >= c) {
             printf("Max Element : %d", a);
+        } else {
+            printf("Max Element : %d", c);
         }
-    } else if (b >= a) {
+    } else {
         if (b >= c) {
             printf("Max Element : %d", b);
-        }
-    } else if (c >= a) {
-        if(c >= b) {
+        } else {
             printf("Max Element : %d", c);
         }
     }
-    
+
     return 0;
 }
-
-
-
