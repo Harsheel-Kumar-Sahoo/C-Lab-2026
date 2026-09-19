@@ -1,6 +1,7 @@
 # C-Lab-2026
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 ![GCC](https://img.shields.io/badge/GCC-333333?style=flat&logo=gnu&logoColor=white)
+<hr>
 Repository containing all lab assignments completed as part of the **Introduction to Programming (IOP)** course.
 
 ## 📁 Repository Structure
