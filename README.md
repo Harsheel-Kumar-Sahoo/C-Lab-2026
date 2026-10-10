@@ -42,6 +42,8 @@ Replace `Qx` with the relevant question file name (e.g., `Q1`, `Q2`).
 |-----|-------------|
 | Lab01 | *C Basics* |
 | Lab02 | *Loops in C* |
+| Lab03 | *Arrays & Further* |
+
 
 ## 📌 Notes
 
