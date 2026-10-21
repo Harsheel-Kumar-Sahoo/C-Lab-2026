@@ -1,15 +1,21 @@
 #include <stdio.h>
 
-void findLength() {
-    char str[100];
-    printf("Enter the line of text : ");
-    scanf("%[^\n]", str);
-    int len = 0;
-    while (str[len] != '\0') len++;
-    printf("The length of the line you entered is %d.", len);
-}
-
 int main(){
-    findLength();
+    char a[100], b[50];
+
+    printf("Enter the first string : ");
+    scanf("%[^\n]", a);
+    printf("Enter the second string : ");
+    scanf(" %[^\n]", b);
+
+    int i = 0, j = 0;
+
+    while (a[i] != '\0') i++;
+    
+    while ((a[i] = b[j])) {
+        i++; j++;
+    }
+
+    printf("The concatenated string is %s", a);
     return 0;
 }
