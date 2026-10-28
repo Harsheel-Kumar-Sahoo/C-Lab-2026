@@ -1,22 +1,25 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(){
-    // Length of a string
-    char str1[] = "Harsheel";
-    int length = strlen(str1);
-    printf("Length of the string is %d.\n", length);
+    char str[30];
+    char ch;
+    printf("Enter a string : ");
+    scanf(" %s", &str);
+    printf("Enter the character to search : ");
+    scanf(" %c", &ch);
+    
+    int i = 0, found = 0;
+    while (str[i] != '\0') {
+        if (str[i] == ch) {
+            found = 1;
+        }
+        i++;
+    }
 
-    // Copy a string to another;
-    char str2[] = "Hello";
-    char str3[] = "Hi";
-    strcpy(str2, str3);
-    printf("%s\n", str2);
-
-    // Concatenate
-    char str4[50] = "Hello";
-    char str5[] = " World!";
-    strcat(str4, str5);
-    printf("%s", str4);
+    if (found) {
+        printf("The character is present in the string.");
+    } else {
+        printf("The character is not present in the string.");
+    }
     return 0;
 }
