@@ -1,25 +1,27 @@
 #include <stdio.h>
 
 int main(){
-    char str[30];
-    char ch;
+    char str[100];
     printf("Enter a string : ");
-    scanf(" %s", &str);
-    printf("Enter the character to search : ");
-    scanf(" %c", &ch);
-    
-    int i = 0, found = 0;
+    scanf("%s", str);
+    int i = 0, count = 0;
     while (str[i] != '\0') {
-        if (str[i] == ch) {
-            found = 1;
+        switch (str[i]) {
+            case 'a':
+            case 'A':
+            case 'e':
+            case 'E':
+            case 'i':
+            case 'I':
+            case 'o':
+            case 'O':
+            case 'u':
+            case 'U':
+                count++;
         }
         i++;
     }
 
-    if (found) {
-        printf("The character is present in the string.");
-    } else {
-        printf("The character is not present in the string.");
-    }
+    printf("There are %d vowels in the string.", count);
     return 0;
 }
