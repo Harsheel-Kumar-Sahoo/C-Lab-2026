@@ -1,42 +1,24 @@
 #include <stdio.h>
 
-int countCharacters(char str[]) {
-    int i = 0;
-    while (str[i] != '\0') i++;
-    return i;
-}
-
-int countWords(char str[]) {
-    int words = 0;
-    int i = 0;
-    int flag = 0;
-    while (1) {
-        if (str[i] == '\0' && str[i - 1] != ' ') {
-            words++;
-            return words;
+void isPalindrome(char str[]) {
+    int i = 0, j = 0;
+    while (str[j] != '\0') j++;
+    j--;
+    
+    while (i < j) {
+        if (str[i] != str[j]) {
+            printf("Not palindrome");
+            return;
         }
-        if (i == 0) {
-            i++;
-        } else if (str[i] != ' ') {
-            i++;
-        } else if (str[i] == ' ' && str[i - 1] != ' ') {
-            words++;
-            i++;
-        } else if (str[i] == ' ' && str[i - 1] == ' ') {
-            i++;
-        }
+        i++; j--;
     }
-
-    return words;
+    printf("Palindrome");
+    return;
 }
 
 int main(){
-    char name[50];
-    printf("Enter the string : ");
-    scanf("%[^\n]", name);
-    printf("Number of characters : ");
-    printf("%d\n", countCharacters(name));
-    printf("Number of words : ");
-    printf("%d\n", countWords(name));
+    char str[50];
+    scanf("%[^\n]", str);
+    isPalindrome(str);
     return 0;
 }
