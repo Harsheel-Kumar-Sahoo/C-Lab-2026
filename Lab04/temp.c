@@ -2,31 +2,25 @@
 #include <string.h>
 
 int main() {
-    char name[20][50], temp[50];
-    int n, i, j;
+    char str[100], temp;
+    int i, j, n;
 
-    printf("Enter the number of names: ");
-    scanf("%d", &n);
+    printf("Enter a string: ");
+    scanf("%s", str);
 
-    printf("Enter %d names:\n", n);
-
-    for (i = 0; i < n; i++) {
-        scanf("%s", name[i]);
-    }
+    n = strlen(str);
 
     for (i = 0; i < n - 1; i++) {
         for (j = i + 1; j < n; j++) {
-            if (strcmp(name[i], name[j]) > 0) {
-                strcpy(temp, name[i]);
-                strcpy(name[i], name[j]);
-                strcpy(name[j], temp);
+            if (str[i] > str[j]) {
+                temp = str[i];
+                str[i] = str[j];
+                str[j] = temp;
             }
         }
     }
 
-    printf("Names in alphabetical order:\n");
-    for (i = 0; i < n; i++) {
-        printf("%s\n", name[i]);
-    }
+    printf("String in dictionary order: %s", str);
+
     return 0;
 }
