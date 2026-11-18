@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="C-Lab-2026 banner" width="100%" />
+</p>
+
 # C-Lab-2026
 
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
