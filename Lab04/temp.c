@@ -1,24 +1,15 @@
 #include <stdio.h>
 
-void isPalindrome(char str[]) {
-    int i = 0, j = 0;
-    while (str[j] != '\0') j++;
-    j--;
-    
-    while (i < j) {
-        if (str[i] != str[j]) {
-            printf("Not palindrome");
-            return;
-        }
-        i++; j--;
-    }
-    printf("Palindrome");
-    return;
-}
-
 int main(){
     char str[50];
+    printf("Enter your name: ");
     scanf("%[^\n]", str);
-    isPalindrome(str);
+
+    printf("Your name in ASCII: ");
+    for (int i = 0; str[i] != '\0'; i++) {
+        int ascii = (int)str[i];
+        printf("%d", ascii);
+    }
+
     return 0;
 }
