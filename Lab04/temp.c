@@ -1,20 +1,26 @@
 #include <stdio.h>
 
-int max(int a, int b) {
-    if (a >= b) return a;
-    return b;
-}
+int words(char *s) {
+    int i = 0;
+    int count = 0;
+    int len = 0;
+    while (s[len] != '\0') len++;
 
-int maxElement(int *arr, int n) {
-    int ans = arr[0];
-    for (int i = 0; i < n; i++) {
-        ans = max(ans, arr[i]);
+    while (i != len) {
+        if (i == 0) {
+            if (s[0] != ' ' && s[1] == ' ') count++;
+        }
+        if (i == len - 1) {
+            if (s[i] != ' ') count++;
+        }
+        if (s[i - 1] != ' ' && s[i] != ' ' && s[i + 1] == ' ') count++;
+        i++;
     }
-    return ans;
+    return count;
 }
 
 int main(){
-    int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    printf("The max element in the array is %d.", maxElement(a, 10));
+    char s[] = "   Hello     world    ";
+    printf("%d", words(s));
     return 0;
 }
