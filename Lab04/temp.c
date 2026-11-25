@@ -1,26 +1,17 @@
 #include <stdio.h>
 
-void copyArr(int* arr1, int n1, int* arr2, int n2) {
-    if (n1 <= n2) {
-        for (int i = 0; i < n1; i++) {
-            arr1[i] = arr2[i];
-        }
-    } else if (n1 > n2) {
-        for (int i = 0; i < n2; i++) {
-            arr1[i] = arr2[i];
-        }
+void length(char *s) {
+    int i = 0, j = 0; 
+    while (s[i] != '\0') {
+        if (s[i] != ' ') j++;
+        i++;
     }
-    printf("Array copied\n");
+    printf("Length including spaces: %d\n", i);
+    printf("Length excluding spaces: %d\n", j);
 }
 
 int main(){
-    int arr1[] = {1, 2, 3, 4};
-    int arr2[] = {2, 4, 6, 8};
-    copyArr(arr1, 4, arr2, 4);
-    
-    for (int i = 0; i < 4; i++) {
-        printf("%d ", arr1[i]);
-    }
-
+    char str[] = "Hello Hi";
+    length(str);
     return 0;
 }
