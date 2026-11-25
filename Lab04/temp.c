@@ -1,17 +1,19 @@
 #include <stdio.h>
 
-void length(char *s) {
-    int i = 0, j = 0; 
-    while (s[i] != '\0') {
-        if (s[i] != ' ') j++;
-        i++;
-    }
-    printf("Length including spaces: %d\n", i);
-    printf("Length excluding spaces: %d\n", j);
+int square(int *n) {
+    int number = *n;
+    return number * number;
+}
+
+int cube(int *n) {
+    int number = *n;
+    return number * number * number;
 }
 
 int main(){
-    char str[] = "Hello Hi";
-    length(str);
+    int a;
+    printf("Enter a number: ");
+    scanf("%d", &a);
+    printf("Square = %d\nCube = %d", square(&a), cube(&a));
     return 0;
 }
